@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+  octoprint:
+    image: octoprint/octoprint
+    restart: unless-stopped
+    ports:
+      - 8081:80
+    devices:
+      - /dev/ttyACM1:/dev/ttyACM1
+    volumes:
+      - /volume1/docker/octoprint:/octoprint
